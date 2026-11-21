@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Défi tamagoyaki — UMAIYA Cuisine</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="candidature.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <span class="brand">UMAIYA Cuisine</span>
+    <nav aria-label="Sur cette page"><a href="#recette">Recette</a> <a href="#vote">Vote</a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="titre">
+      <div>
+        <p class="tag">Défi tamagoyaki · ouverture le 1er décembre</p>
+        <h1 id="titre">À toi de rouler le tamagoyaki</h1>
+        <p>Prépare une omelette japonaise roulée, puis imagine ta propre variation. Trois recettes finalistes seront reproduites par Aiko.</p>
+        <a class="action" href="#recette">Cuisiner le tamagoyaki</a>
+      </div>
+      <img src="tamagoyaki.jpg" alt="Tranches de tamagoyaki, l’omelette japonaise roulée">
+    </section>
+
+    <section id="recette" aria-labelledby="titre-recette">
+      <h2 id="titre-recette">La recette de base</h2>
+      <p class="meta">4 portions · 5 min de préparation · 10 min de cuisson</p>
+      <aside class="status" aria-label="Allergènes et précautions">
+        <p><strong>Allergènes</strong> — œufs et soja. Le dashi peut contenir du poisson, notamment de la bonite. La sauce soja peut contenir du blé (gluten).</p>
+        <p>Vérifie les étiquettes des produits, y compris les mentions de traces. En cas d’allergie, évite les ingrédients concernés et les contacts croisés avec les ustensiles et les surfaces de préparation. Si la composition ou les traces restent incertaines, ne consomme pas le plat.</p>
+      </aside>
+      <div class="recipe">
+        <div>
+          <h3>Ingrédients</h3>
+          <ul>
+            <li>5 œufs</li>
+            <li>2 cuillères à soupe de dashi ou d’eau</li>
+            <li>1 cuillère à soupe de sucre</li>
+            <li>1 cuillère à café de sauce soja claire</li>
+            <li>1 pincée de sel</li>
+            <li>Un peu d’huile neutre</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Préparation</h3>
+          <ol>
+            <li>Bats les œufs, puis ajoute le dashi ou l’eau, le sucre, la sauce soja et le sel. Mélange juste assez pour les dissoudre.</li>
+            <li>Chauffe une poêle à feu moyen et huile-la légèrement avec un papier absorbant.</li>
+            <li>Verse une fine couche d’œuf. Lorsqu’elle commence à prendre, roule-la vers un bord de la poêle. Si elle dore trop vite, baisse le feu.</li>
+            <li>Pousse le rouleau vers le bord opposé, huile la poêle et ajoute une couche d’œuf en soulevant le rouleau pour que le liquide coule dessous.</li>
+            <li>Enroule la nouvelle couche autour du rouleau et répète jusqu’à épuisement des œufs. Une natte à sushis peut aider à régulariser la forme.</li>
+            <li>Laisse refroidir, puis tranche l’omelette en portions régulières.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="participation" aria-labelledby="titre-participation">
+      <h2 id="titre-participation">Proposer ta variation</h2>
+      <p>La candidature sera gratuite et se fera par e-mail à <strong>umaiya.app@gmail.com</strong> du 1er au 24 décembre 2026. Elle sera réservée aux personnes majeures résidant en France métropolitaine, Corse comprise, ou dans un DROM.</p>
+      <p><a href="reglement.html">Lire le règlement version 1.0</a>, <a href="confidentialite.html">la notice de confidentialité du défi</a> et <a href="conditions-lot.html">les conditions du lot</a> avant de préparer le message.</p>
+      <p>Indique ton prénom ou pseudonyme, confirme ta majorité et ta résidence dans le territoire prévu, puis joins le titre, les ingrédients quantifiés, les étapes, une brève description de la variation et une photo originale du plat. Signale les allergènes de tous les ingrédients, y compris les produits composés, et les mentions de traces figurant sur les étiquettes.</p>
+      <details class="entry-template">
+        <summary>Voir le modèle d’e-mail</summary>
+        <p>Objet proposé <strong id="entry-subject">Défi tamagoyaki — [titre de ma recette]</strong></p>
+        <label for="entry-template">Modèle à compléter dans ta messagerie</label>
+        <textarea id="entry-template" rows="15" readonly spellcheck="false">Prénom ou pseudonyme à afficher :
+Je confirme avoir 18 ans ou plus et résider dans le territoire indiqué au règlement : [oui]
+
+Titre de ma variation :
+Nombre de portions :
+Ingrédients et quantités :
+Étapes :
+Ce que j’ai changé dans la recette de base :
+Allergènes de la recette et mentions de traces relevées sur les étiquettes :
+
+Pièce jointe : photo originale du plat.
+Je confirme pouvoir soumettre le texte et la photo : [oui]
+J’ai lu et j’accepte le règlement version 1.0 : [oui]</textarea>
+        <p>Ajoute ta photo en pièce jointe. Indique les allergènes de la recette sans transmettre d’informations médicales personnelles.</p>
+        <div class="entry-actions">
+          <button type="button" id="copy-entry">Copier le modèle</button>
+          <button type="button" id="prepare-entry" data-recipient="umaiya.app@gmail.com" disabled>Préparer ma candidature</button>
+        </div>
+        <p id="entry-feedback" role="status"></p>
+      </details>
+      <p class="status">Les candidatures ne sont pas ouvertes. Attends l’ouverture avant d’envoyer ton e-mail.</p>
+    </section>
+
+    <section id="vote" aria-labelledby="titre-vote">
+      <h2 id="titre-vote">Le vote des finalistes</h2>
+      <p>Tu pourras découvrir les trois recettes reproduites par Aiko. Le vote du public, envoyé avec Google Forms, comptera pour 60 % et la note de dégustation de SITHAKOUL Sing, organisateur et seul évaluateur, pour 40 %.</p>
+      <p>La recette du lauréat sera créditée dans UMAIYA Cuisine à partir de février 2027, au plus tard le 31 mars 2027, et restera accessible gratuitement pendant douze mois après sa publication effective. Une vidéo de présentation sera publiée au plus tard le 15 avril 2027. Ces échéances figurent dans le règlement version 1.0 et les conditions du lot.</p>
+      <p>Quand les trois fiches seront publiées, tu pourras suivre le lien du formulaire Google, saisir ton adresse e-mail, choisir une recette et envoyer ton vote gratuitement. Un compte Google ne sera pas nécessaire. L’adresse saisie sera utilisée pour rapprocher les réponses répétées.</p>
+      <div class="status" aria-label="Mode de vote en préparation">
+        <strong>Comment voter quand la finale ouvrira</strong>
+        <ol>
+          <li>Lis les trois fiches et choisis l’identifiant d’une recette.</li>
+          <li>Ouvre le lien Google Forms et saisis ton adresse e-mail.</li>
+          <li>Choisis une seule recette, puis envoie ton vote.</li>
+        </ol>
+        <p>Le vote est fermé. Les identifiants, les fiches et les consignes définitives seront affichés après validation par les finalistes.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a href="reglement.html">Règlement version 1.0</a> <a href="confidentialite.html">Notice du défi</a> <a href="conditions-lot.html">Conditions du lot</a></footer>
+</body>
+</html>
